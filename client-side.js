@@ -46,13 +46,6 @@ mp.events.add('stopWorking', () => {
 
 mp.events.add('createWorkMarker', () => {
     workMarker = mp.markers.new(markerType, markerCoords, markerSize, { color: markerColor });
-    mp.game.graphics.drawText("Начать работу дальнобойщика", [markerCoords.x, markerCoords.y, markerCoords.z + 1], {
-        font: 7, 
-        color: [255, 255, 255, 185], 
-        scale: [1.2, 1.2], 
-        outline: true,
-        centre: true
-      });
     workMarkerColshape = mp.colshapes.newSphere(markerCoords.x, markerCoords.y, markerCoords.z, 2);
     workBlip = mp.blips.new(blipType, markerCoords, {shortRange: false, name: "Настройка антенн"});
 });
