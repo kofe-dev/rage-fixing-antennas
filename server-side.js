@@ -1,6 +1,5 @@
 mp.events.add("playerReady", player => {
     player.call('createWorkMarker');
-    let isWorking = true;
 });
 
 mp.events.addCommand('stopjob', (player) => {
